@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Gallery Ivo</title>
+		<link
+			rel="icon"
+			href="https://i.pinimg.com/236x/fe/e6/42/fee642ae014a198fcc84f696082474d9.jpg"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+			integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+
+	<body>
+		<!-- Qidiruv qismi -->
+		<div class="search_box">
+			<div class="search_form">
+				<p class="search_title">Welcome to my Website</p>
+				<input id="input_search" type="text" placeholder="Qidirish" />
+			</div>
+			<div id="snow-container">
+				<canvas id="snow-build-up"></canvas>
+			</div>
+		</div>
+
+		<!-- Galereya -->
+		<section class="gallery">
+			<ul class="images"></ul>
+			<button class="load-more">Load More</button>
+		</section>
+
+		<!-- Lightbox modal -->
+		<div class="lightbox" style="display: none">
+			<div class="wrapper">
+				<header>
+					<div class="photographer">
+						<i class="uil uil-camera"></i>
+						<span>Maria Loznevay</span>
+					</div>
+					<div class="buttons">
+						<i class="uil uil-import download-btn"></i>
+						<!-- Yuklab olish tugmasi -->
+						<i class="uil uil-times close-lightbox"></i>
+						<!-- Yopish tugmasi -->
+					</div>
+				</header>
+				<div class="preview-img">
+					<div class="img">
+						<img src="" alt="preview-img" id="lightbox-img" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal_image_box">
+			<div class="modal_content_div"></div>
+		</div>
+
+		<script src="./snow.js"></script>
+		<script src="./main.js"></script>
+	</body>
+</html>

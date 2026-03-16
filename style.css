@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body {
+	position: relative;
+}
+
+.gallery {
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	align-items: center;
+}
+.gallery .images {
+	gap: 15px;
+	max-width: 95%;
+	columns: 5 340px;
+	margin-top: 40px;
+}
+.card {
+	overflow: hidden;
+}
+.card img {
+	transition: transform 0.4s ease-in-out;
+}
+
+.card:hover img {
+	transform: scale(1.2);
+}
+
+.images .card:hover .details {
+	bottom: 0px;
+}
+.images .card {
+	display: flex;
+	overflow: hidden;
+	position: relative;
+	list-style: none;
+	margin-bottom: 14px;
+	border-radius: 10px;
+}
+.images .card .details {
+	position: absolute;
+	bottom: -100px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px 20px;
+	transition: bottom 0.1s ease;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+.images .card:hover .details {
+	bottom: 0px;
+}
+.card .details .photographer {
+	color: #fff;
+	display: flex;
+	align-items: center;
+}
+.details .photographer i {
+	font-size: 1.4rem;
+	margin-right: 10px;
+}
+.details .photographer span {
+	font-size: 1.05rem;
+}
+.button {
+	cursor: pointer;
+	padding: 3px 8px;
+	font-size: 1.1rem;
+	background: #fff;
+}
+.images img {
+	width: 100%;
+}
+.gallery .load-more {
+	margin: 50px 0;
+	color: #fff;
+	cursor: pointer;
+	font-size: 1.2rem;
+	padding: 12px 27px;
+	border: none;
+	background: #8a6cff;
+}
+.lightbox {
+	position: fixed;
+	z-index: 5;
+	width: 100%;
+	height: 100%;
+	display: none;
+	background: rgba(0, 0, 0, 0.65);
+}
+.lightbox .wrapper {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 100%;
+	padding: 20px;
+	max-width: 850px;
+	background: #fff;
+	border-radius: 5px;
+	transform: translate(-50%, -50%);
+}
+.wrapper header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.card .details {
+	color: #333;
+}
+.header .photographer i {
+	font-size: 1.7rem;
+}
+.header .photographer span {
+	font-size: 1.2rem;
+}
+header .button i {
+	width: 40px;
+	height: 40px;
+	color: #fff;
+	cursor: pointer;
+	text-align: center;
+	line-height: 40px;
+	background: #8a6cff;
+	display: inline-block;
+}
+.button i:last-child {
+	margin-left: 10px;
+	background: #6c757d;
+}
+.preview-img {
+	display: flex;
+	margin-top: 25px;
+	justify-content: center;
+}
+.wrapper .preview-img .img {
+	max-height: 65vh;
+	height: 100%;
+	max-width: 90vh;
+}
+.preview-img .img img {
+	max-width: 100%;
+}
+.down_btn {
+	padding: 5px 10px;
+}
+
+.search_box {
+	width: 100%;
+	height: 100%;
+	min-height: 50vh;
+	position: relative;
+	background-image: url('https://avatars.mds.yandex.net/get-mpic/11465226/2a0000018c2c59fe1614b70f60c9db77ae10/orig');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.search_form {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: none;
+	align-items: center;
+}
+.search_form input {
+	top: 60%;
+	width: 80%;
+	max-width: 600px;
+	padding: 10px 20px;
+	position: absolute;
+	z-index: 2;
+	outline: none;
+	font-size: 20px;
+	border-radius: 10px;
+	border: none;
+}
+.search_title {
+	color: white;
+	font-size: 50px;
+	margin-top: 100px;
+	font-weight: 700;
+}
+/* snow */
+#snow-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	bottom: 0;
+}
+
+.snowflake {
+	position: absolute;
+	color: white;
+	font-size: 20px;
+	opacity: 0.8;
+}
+
+.snow-build-up {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background: white;
+	transition: all 0.1s;
+}
+
+.modal_image_box {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.388);
+	z-index: 5;
+	top: 50%;
+	top: 0;
+	bottom: 0;
+}
+
+.modal_content_div {
+	height: 500px;
+	width: 600px;
+	background-color: white;
+	padding: 10px 20px;
+	display: flex;
+	justify-content: center;
+}
+
+.modal_text {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 50px;
+}
+
+.modal_sfsdfds {
+	width: 600px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.modal_sfsdfds img {
+	width: 90%;
+	height: 80%;
+	object-fit: contain;
+}
+
+.modal_d_btn {
+	margin-top: 10px;
+	background: #8a6cff;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 20px;
+}
